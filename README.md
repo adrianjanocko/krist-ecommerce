@@ -1,3 +1,5 @@
+![Krist E-Commerce Preview](https://i.imgur.com/dNqMM4l.png)
+
 # 🛍️ Krist E-Commerce – Full-Stack E-Commerce with Next.js & Supabase
 
 Krist E-Commerce is a fully functional e-commerce platform designed with **modern web technologies**. This project serves as a **complete full-stack solution**, including authentication, product management, a shopping cart, an admin dashboard, and a sleek, responsive UI.
