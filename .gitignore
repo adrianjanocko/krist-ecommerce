@@ -1,0 +1,9 @@
+.env.local
+/.next
+/node_modules
+tsconfig.json
+tailwind.config.ts
+postcss.config.mjs
+next.config.ts
+next-env.d.ts
+eslint.config.mjs
