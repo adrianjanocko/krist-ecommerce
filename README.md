@@ -1,4 +1,4 @@
-![Krist E-Commerce Preview](https://i.imgur.com/dNqMM4l.png)
+![Krist E-Commerce Preview](https://i.imgur.com/EWhN2wc.png)
 
 # 🛍️ Krist E-Commerce – Full-Stack E-Commerce with Next.js & Supabase
 
