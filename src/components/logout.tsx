@@ -2,7 +2,7 @@
 
 import useActionHandler from "@/hooks/useActionHandler";
 import { logoutUser } from "@/lib/actions";
-import SubmitButton from "../../components/submit-button";
+import SubmitButton from "./submit-button";
 
 export default function Logout() {
   const { isPending, processAction } = useActionHandler();

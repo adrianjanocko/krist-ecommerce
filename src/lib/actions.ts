@@ -2,7 +2,7 @@
 
 import { loginSchema, registerSchema } from "@/util/schemas";
 import { revalidatePath } from "next/cache";
-import { LoginData, RegisterData } from "../util/types";
+import { Category, LoginData, RegisterData } from "../util/types";
 import { createClient } from "./supabase/server";
 
 /////////////
@@ -27,7 +27,11 @@ export async function registerUser(formData: RegisterData) {
     },
   });
 
-  if (error) return { success: false, message: "Registration failed" };
+  if (error) {
+    console.error(error);
+
+    return { success: false, message: "Registration failed" };
+  }
 
   revalidatePath("/");
 
@@ -47,7 +51,11 @@ export async function loginUser(formData: LoginData) {
     password: validate.data.password,
   });
 
-  if (error) return { success: false, message: "Login failed" };
+  if (error) {
+    console.error(error);
+
+    return { success: false, message: "Login failed" };
+  }
 
   revalidatePath("/");
 
@@ -59,9 +67,31 @@ export async function logoutUser() {
 
   const { error } = await supabase.auth.signOut();
 
-  if (error) return { success: false, message: "Logout failed" };
+  if (error) {
+    console.error(error);
+
+    return { success: false, message: "Logout failed" };
+  }
 
   revalidatePath("/");
 
   return { success: true, message: "Logout successful" };
+}
+
+/////////////
+// SUPABASE - GET
+export async function getCategories(): Promise<Category[]> {
+  const supabase = await createClient();
+
+  const { data: categories, error } = await supabase
+    .from("categories")
+    .select("*");
+
+  if (error) {
+    console.error(error);
+
+    throw new Error("Failed to fetch categories.");
+  }
+
+  return categories;
 }

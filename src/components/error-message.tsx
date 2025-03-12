@@ -1,10 +1,6 @@
 import { FieldError } from "react-hook-form";
 
-interface ErrorMessageProps {
-  error?: FieldError;
-}
-
-export default function ErrorMessage({ error }: ErrorMessageProps) {
+export default function ErrorMessage({ error }: { error?: FieldError }) {
   if (!error || !error.message) return null;
 
   return <p className="text-red-500 text-sm mt-1">{error.message}</p>;

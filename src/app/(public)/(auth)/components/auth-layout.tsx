@@ -2,21 +2,24 @@ import Logo from "@/components/logo";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { FormEvent, ReactNode } from "react";
+
+import loginImage from "/public/images/auth/login.png";
+import registerImage from "/public/images/auth/register.png";
+
+interface AuthLayoutProps {
+  children: ReactNode;
+  heading: string;
+  subheading: string;
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+}
 
 export default function AuthLayout({
   children,
   heading,
   subheading,
-  imageUrl,
   onSubmit,
-}: {
-  children: ReactNode;
-  heading: string;
-  subheading: string;
-  imageUrl: string;
-  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
-}) {
+}: AuthLayoutProps) {
   const pathname = usePathname();
 
   return (
@@ -28,7 +31,8 @@ export default function AuthLayout({
 
         <div className="relative h-full w-full">
           <Image
-            src={imageUrl}
+            src={pathname === "/login" ? loginImage : registerImage}
+            placeholder="blur"
             alt="Preview Image"
             fill
             className="object-cover"

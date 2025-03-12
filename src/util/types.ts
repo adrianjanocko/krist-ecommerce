@@ -6,5 +6,10 @@ export type ResponseMessage = {
   message: string;
 };
 
+export interface Category {
+  id: number;
+  name: string;
+}
+
 export type LoginData = z.infer<typeof loginSchema>;
 export type RegisterData = z.infer<typeof registerSchema>;

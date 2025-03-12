@@ -63,7 +63,6 @@ export default function RegisterPage() {
     <AuthLayout
       heading="Create New Account"
       subheading="Please enter details"
-      imageUrl="/images/auth/register.png"
       onSubmit={handleSubmit(onSubmit)}
     >
       {inputConfig.map(({ id, label, type, placeholder }) => (
