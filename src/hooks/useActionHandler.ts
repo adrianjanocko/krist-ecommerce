@@ -31,7 +31,8 @@ async function handleResponseMessage(
   const response = await promise;
 
   if (response.success) {
-    toast.success(response.message);
     if (onSuccess) onSuccess();
+
+    toast.success(response.message);
   } else toast.error(response.message);
 }
