@@ -85,7 +85,8 @@ export async function getCategories(): Promise<Category[]> {
 
   const { data: categories, error } = await supabase
     .from("categories")
-    .select("*");
+    .select("*")
+    .order("name", { ascending: false });
 
   if (error) {
     console.error(error);
