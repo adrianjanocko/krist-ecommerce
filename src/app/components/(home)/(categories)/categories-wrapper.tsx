@@ -5,6 +5,7 @@ import H2 from "@/components/H2";
 import { Category } from "@/util/types";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -78,9 +79,17 @@ export default function CategoriesWrapper({
         <div className="flex">
           {categories.map((category, index) => (
             <div key={index} className="flex-[0_0_50%] lg:flex-[0_0_25%] p-1">
-              <div className="bg-grey-light p-4 min-h-48 grid">
-                <span className="place-self-center text-2xl font-bold text-grey">
-                  {category.name}
+              <div className="bg-grey-light p-4 min-h-60 grid z-10 relative overflow-hidden">
+                <div className="absolute size-full -z-10 left-10 top-5">
+                  <Image
+                    src={category.image_url}
+                    alt={`${category.name} Image`}
+                    className="object-cover object-top"
+                    fill
+                  />
+                </div>
+                <span className="text-nowrap absolute top-3 left-10 text-6xl font-bold text-grey -z-20 opacity-40">
+                  {category.name} Wear
                 </span>
                 <Link
                   href={category.name

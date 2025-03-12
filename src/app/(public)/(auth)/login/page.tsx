@@ -50,7 +50,6 @@ export default function LoginPage() {
     <AuthLayout
       heading="Welcome 👋"
       subheading="Please login here"
-      imageUrl="/images/auth/login.png"
       onSubmit={handleSubmit(onSubmit)}
     >
       {inputConfig.map(({ id, label, type, placeholder }) => (

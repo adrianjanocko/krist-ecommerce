@@ -9,6 +9,7 @@ export type ResponseMessage = {
 export interface Category {
   id: number;
   name: string;
+  image_url: string;
 }
 
 export type LoginData = z.infer<typeof loginSchema>;
