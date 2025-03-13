@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
-export default function CategoriesWrapper({
+export default function Categories({
   categories = [],
 }: {
   categories: Category[];
@@ -25,12 +25,11 @@ export default function CategoriesWrapper({
   useEffect(() => {
     const handleSelect = () => {
       if (emblaApi) {
-        if (scrollPrevRef.current) {
+        if (scrollPrevRef.current)
           scrollPrevRef.current.disabled = !emblaApi.canScrollPrev();
-        }
-        if (scrollNextRef.current) {
+
+        if (scrollNextRef.current)
           scrollNextRef.current.disabled = !emblaApi.canScrollNext();
-        }
       }
     };
 
@@ -43,13 +42,13 @@ export default function CategoriesWrapper({
     }
   }, [emblaApi]);
 
-  const scrollPrev = () => {
+  function scrollPrev() {
     if (emblaApi) emblaApi.scrollPrev();
-  };
+  }
 
-  const scrollNext = () => {
+  function scrollNext() {
     if (emblaApi) emblaApi.scrollNext();
-  };
+  }
 
   return (
     <div className="grid gap-6">
@@ -83,6 +82,7 @@ export default function CategoriesWrapper({
                 <div className="absolute size-full -z-10 left-10 top-5">
                   <Image
                     src={category.image_url}
+                    blurDataURL={category.image_url}
                     alt={`${category.name} Image`}
                     className="object-cover object-top"
                     fill

@@ -19,7 +19,7 @@ export default async function Navbar() {
             (item, index) => (
               <li key={index}>
                 <Link
-                  className="link"
+                  className="hover:text-grey"
                   href={
                     item === "Home"
                       ? "/"
