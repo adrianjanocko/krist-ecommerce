@@ -88,7 +88,7 @@ export default function RegisterPage() {
           />
           <label htmlFor="terms">
             I agree to the{" "}
-            <Link href="/" className="font-bold">
+            <Link href="/terms-and-conditions" className="font-bold">
               Terms & Conditions
             </Link>
           </label>
