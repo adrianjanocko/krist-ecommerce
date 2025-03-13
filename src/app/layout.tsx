@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import { Toaster } from "react-hot-toast";
-import Footer from "./components/footer/footer";
 import "./globals.css";
 
 const jost = Jost({
@@ -9,8 +8,11 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Krist",
-  description: "Online e-commerce demo store..",
+  title: {
+    template: "%s / Krist",
+    default: "Krist",
+  },
+  description: "Full-stack e-commerce platform built with modern technologies.",
 };
 
 export default function RootLayout({
@@ -21,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={`${jost.className} antialiased`}>
-        {children}
-
-        <Footer />
+        <main>{children}</main>
 
         <Toaster position="top-right" reverseOrder={false} />
       </body>

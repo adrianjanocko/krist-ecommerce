@@ -1,4 +1,3 @@
-import Navbar from "@/app/components/navbar/navbar";
 import Button from "@/components/button";
 import H2 from "@/components/H2";
 import Section from "@/components/layout/section";
@@ -8,19 +7,22 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
+import H1 from "@/components/H1";
+import Footer from "./components/footer/footer";
 import CategoriesProvider from "./components/home/categories/categories-provider";
+import Navbar from "./components/navbar/navbar";
 import heroImage from "/public/images/home/hero.png";
 
 export default async function HomePage() {
   return (
-    <div>
-      <div className="flex flex-col gap-4 min-h-screen px-4 pt-4">
-        <Navbar />
+    <>
+      <Navbar />
 
+      <div className="px-4">
         <div className="bg-grey-light flex-1 flex items-center justify-center xl:mx-4 gap-10 z-10 p-6 relative">
           <div className="grid gap-2 max-w-md">
             <H2>Classic Exclusive</H2>
-            <h1 className="font-bold text-6xl mb-2">Women's Collection</h1>
+            <H1 className="mb-2">Women's Collection</H1>
             <p className="text-grey text-xl mb-4">
               Discover the latest trends in women's fashion. Up to 40% OFF and
               other exclusive offers.
@@ -54,6 +56,8 @@ export default async function HomePage() {
           </ErrorBoundary>
         </Suspense>
       </Section>
-    </div>
+
+      <Footer />
+    </>
   );
 }
