@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .link {
-    @apply duration-300 transition-colors hover:text-grey no-underline;
-  }
+a {
+  @apply duration-300 transition-all no-underline;
 }

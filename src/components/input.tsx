@@ -1,20 +1,32 @@
-import { forwardRef, InputHTMLAttributes } from "react";
+import { forwardRef, HTMLInputTypeAttribute, InputHTMLAttributes } from "react";
 import { FieldError } from "react-hook-form";
 import { twMerge } from "tailwind-merge";
 import ErrorMessage from "./error-message";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
-  type: string;
+  type: HTMLInputTypeAttribute;
   placeholder?: string;
   error?: FieldError;
   isPending?: boolean;
+  className?: string;
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, type = "text", placeholder, error, isPending, ...props }, ref) => {
+  (
+    {
+      label,
+      type = "text",
+      placeholder,
+      error,
+      isPending,
+      className,
+      ...props
+    },
+    ref
+  ) => {
     return (
-      <div className="grid gap-1">
+      <div className={"grid gap-1"}>
         {label && (
           <label htmlFor={props.id} className="text-sm">
             {label}
@@ -28,7 +40,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={twMerge(
             type !== "checkbox" &&
               "input w-full border-[1px] border-black focus:outline-none",
-            type === "checkbox" && "checkbox rounded-md border-black size-5"
+            type === "checkbox" && "checkbox rounded-md border-black size-5",
+            className
           )}
           disabled={isPending}
           {...props}

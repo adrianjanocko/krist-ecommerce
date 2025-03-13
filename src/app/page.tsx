@@ -1,20 +1,20 @@
-import Navbar from "@/app/components/(navbar)/navbar";
+import Navbar from "@/app/components/navbar/navbar";
 import Button from "@/components/button";
 import H2 from "@/components/H2";
 import Section from "@/components/layout/section";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-import Categories from "./components/(home)/(categories)/categories";
-import heroImage from "/public/images/home/hero.png";
-
 import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
+import CategoriesProvider from "./components/home/categories/categories-provider";
+import heroImage from "/public/images/home/hero.png";
+
 export default async function HomePage() {
   return (
-    <div className="px-4 pb-4">
-      <div className="flex flex-col gap-4 min-h-screen py-4">
+    <div>
+      <div className="flex flex-col gap-4 min-h-screen px-4 pt-4">
         <Navbar />
 
         <div className="bg-grey-light flex-1 flex items-center justify-center xl:mx-4 gap-10 z-10 p-6 relative">
@@ -50,7 +50,7 @@ export default async function HomePage() {
       <Section>
         <Suspense fallback={<p>Loading...</p>}>
           <ErrorBoundary fallback={<p>Failed to fetch categories.</p>}>
-            <Categories />
+            <CategoriesProvider />
           </ErrorBoundary>
         </Suspense>
       </Section>
