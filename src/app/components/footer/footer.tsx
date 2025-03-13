@@ -79,14 +79,11 @@ export default function Footer() {
               collections and product launches.
             </p>
 
-            {/* <label className="input flex items-center gap-4 bg-transparent text-white border border-white rounded-lg appearance-none">
-              <EnvelopeOpenIcon className="size-5" />
-              <input type="text" className="grow" placeholder="E-Mail" />
-            </label> */}
             <Input
               placeholder="E-Mail"
               type="email"
-              className="bg-transparent border-white"
+              className="bg-transparent border-white text-white"
+              icon={<EnvelopeIcon />}
             />
           </div>
         </div>
