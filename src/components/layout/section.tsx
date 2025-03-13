@@ -4,12 +4,13 @@ import Container from "./container";
 
 interface SectionProps {
   children: ReactNode;
+  title?: string;
   className?: string;
 }
 
-export default function Section({ children, className }: SectionProps) {
+export default function Section({ children, title, className }: SectionProps) {
   return (
-    <Container className={twMerge("px-4 py-14", className)}>
+    <Container title={title} className={twMerge("py-14", className)}>
       {children}
     </Container>
   );

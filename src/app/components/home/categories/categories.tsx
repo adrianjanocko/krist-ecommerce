@@ -92,10 +92,10 @@ export default function Categories({
                   {category.name} Wear
                 </span>
                 <Link
-                  href={category.name
+                  href={`/shop/${category.name
                     .toLowerCase()
                     .replace(/ /g, "-")
-                    .replace(/&/g, "and")}
+                    .replace(/&/g, "and")}`}
                   className="self-end bg-white text-center py-3 font-medium rounded-lg"
                 >
                   {category.name} Wear

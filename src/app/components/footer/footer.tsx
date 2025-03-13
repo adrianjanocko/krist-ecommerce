@@ -45,26 +45,23 @@ export default function Footer() {
           {[
             {
               title: "Information",
-              links: ["Profile", "Login", "My Cart", "My Wishlist", "Checkout"],
+              links: ["Login", "Cart", "Wishlist", "Checkout"],
             },
             {
               title: "Service",
-              links: [
-                "About Us",
-                "Careers",
-                "Delivery Information",
-                "Privacy Policy",
-                "Terms & Conditions",
-              ],
+              links: ["Our Story", "Privacy Policy", "Terms & Conditions"],
             },
           ].map((section, index) => (
-            <div key={index} className="grid gap-3">
+            <div key={index} className="grid gap-3 self-start">
               <h3 className="font-bold mb-2">{section.title}</h3>
               {section.links.map((text, linkIndex) => (
                 <Link
                   key={linkIndex}
                   className="hover:text-grey hover:underline"
-                  href={`/${text.toLowerCase().replace(/ /g, "-")}`}
+                  href={`/${text
+                    .toLowerCase()
+                    .replace(/ /g, "-")
+                    .replace(/&/g, "and")}`}
                 >
                   {text}
                 </Link>

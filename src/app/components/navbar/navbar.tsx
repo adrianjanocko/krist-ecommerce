@@ -11,11 +11,11 @@ import User from "./user";
 export default async function Navbar() {
   return (
     <nav>
-      <Container className="flex justify-between items-center">
+      <Container className="flex justify-between items-center py-4">
         <Logo />
 
         <ul className="flex gap-7">
-          {["Home", "Shop", "Our Story", "Blog", "Contact Us"].map(
+          {["Home", "Shop", "Our Story", "Blog", "Contact"].map(
             (item, index) => (
               <li key={index}>
                 <Link
