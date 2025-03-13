@@ -79,7 +79,7 @@ export default function RegisterPage() {
       ))}
 
       <div className="grid gap-1 mb-4">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Input
             id="terms"
             type="checkbox"
