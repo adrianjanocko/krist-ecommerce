@@ -2,6 +2,7 @@
 
 import Button from "@/components/button";
 import H2 from "@/components/H2";
+import Grid from "@/components/layout/grid";
 import { Category } from "@/util/types";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import useEmblaCarousel from "embla-carousel-react";
@@ -51,7 +52,7 @@ export default function Categories({
   }
 
   return (
-    <div className="grid gap-6">
+    <Grid>
       <div className="flex justify-between items-center mb-4">
         <H2>Shop by Categories</H2>
 
@@ -105,6 +106,6 @@ export default function Categories({
           ))}
         </div>
       </div>
-    </div>
+    </Grid>
   );
 }

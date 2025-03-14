@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-black text-white text-sm">
-      <Section className="grid gap-8">
+      <Section className="grid gap-8 my-0 py-14">
         <div className="grid grid-cols-4 gap-8">
           <div className="grid gap-4">
             <Logo invert />
