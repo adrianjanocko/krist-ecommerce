@@ -80,7 +80,7 @@ export default function Categories({
           {categories.map((category, index) => (
             <div key={index} className="flex-[0_0_50%] lg:flex-[0_0_25%] p-1">
               <div className="bg-grey-light p-4 min-h-60 grid z-10 relative overflow-hidden">
-                <div className="absolute size-full -z-10 left-10 top-5">
+                <div className="absolute size-60 lg:size-full -z-10 left-10 top-5">
                   <Image
                     src={category.image_url}
                     blurDataURL={category.image_url}

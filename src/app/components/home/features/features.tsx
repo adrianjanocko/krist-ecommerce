@@ -7,7 +7,7 @@ import {
 
 export default function Features() {
   return (
-    <ul className="grid grid-cols-4 justify-between">
+    <ul className="flex flex-wrap justify-between gap-3">
       {[
         {
           icon: ShoppingBagIcon,
