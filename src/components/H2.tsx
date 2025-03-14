@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
+import { WrapperProps } from "@/util/types";
+import { twMerge } from "tailwind-merge";
 
-export default function H2({ children }: { children: ReactNode }) {
-  return <h2 className="text-4xl">{children}</h2>;
+export default function H2({ children, className }: WrapperProps) {
+  return <h2 className={twMerge("text-4xl", className)}>{children}</h2>;
 }

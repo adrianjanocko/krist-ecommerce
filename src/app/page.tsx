@@ -10,6 +10,8 @@ import { ErrorBoundary } from "react-error-boundary";
 import H1 from "@/components/H1";
 import Footer from "./components/footer/footer";
 import CategoriesProvider from "./components/home/categories/categories-provider";
+import Features from "./components/home/features/features";
+import Instagram from "./components/home/instagram/instagram";
 import Navbar from "./components/navbar/navbar";
 import heroImage from "/public/images/home/hero.png";
 
@@ -55,6 +57,14 @@ export default async function HomePage() {
             <CategoriesProvider />
           </ErrorBoundary>
         </Suspense>
+      </Section>
+
+      <Section>
+        <Instagram />
+      </Section>
+
+      <Section>
+        <Features />
       </Section>
 
       <Footer />
