@@ -13,7 +13,7 @@ import CategoriesProvider from "./components/home/categories/categories-provider
 import Deals from "./components/home/deals/deals";
 import Features from "./components/home/features/features";
 import Instagram from "./components/home/instagram/instagram";
-import Reviews from "./components/home/reviews/reviews";
+import ReviewsProvider from "./components/home/reviews/reviews-provider";
 import Navbar from "./components/navbar/navbar";
 import heroImage from "/public/images/home/hero.png";
 
@@ -65,9 +65,9 @@ export default async function HomePage() {
         <Deals />
       </Section>
 
-      <div className="bg-gray-light">
+      <div className="bg-gray-light py-2">
         <Section>
-          <Reviews />
+          <ReviewsProvider />
         </Section>
       </div>
 
