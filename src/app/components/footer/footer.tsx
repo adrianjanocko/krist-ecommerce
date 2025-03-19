@@ -32,7 +32,7 @@ export default function Footer() {
               <Link
                 key={index}
                 href={item.href}
-                className="flex items-start gap-2 hover:text-grey hover:underline"
+                className="flex items-start gap-2 hover:text-gray hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -57,7 +57,7 @@ export default function Footer() {
               {section.links.map((text, linkIndex) => (
                 <Link
                   key={linkIndex}
-                  className="hover:text-grey hover:underline"
+                  className="hover:text-gray hover:underline"
                   href={`/${text
                     .toLowerCase()
                     .replace(/ /g, "-")
@@ -85,9 +85,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="bg-grey opacity-20 w-full h-[1px]" />
+        <div className="bg-gray opacity-20 w-full h-[1px]" />
 
-        <span className="text-grey">
+        <span className="text-gray">
           &copy; {new Date().getFullYear()} - All rights reserved
         </span>
       </Section>

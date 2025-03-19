@@ -13,6 +13,7 @@ import CategoriesProvider from "./components/home/categories/categories-provider
 import Deals from "./components/home/deals/deals";
 import Features from "./components/home/features/features";
 import Instagram from "./components/home/instagram/instagram";
+import Reviews from "./components/home/reviews/reviews";
 import Navbar from "./components/navbar/navbar";
 import heroImage from "/public/images/home/hero.png";
 
@@ -22,11 +23,11 @@ export default async function HomePage() {
       <Navbar />
 
       <div className="px-4">
-        <div className="bg-grey-light flex-1 flex items-center justify-center xl:mx-4 gap-10 z-10 p-6 relative">
+        <div className="bg-gray-light flex-1 flex items-center justify-center xl:mx-4 gap-10 z-10 p-6 relative">
           <div className="grid gap-2 max-w-md">
             <H2>Classic Exclusive</H2>
             <H1 className="mb-2">Women's Collection</H1>
-            <p className="text-grey text-xl mb-4">
+            <p className="text-gray text-xl mb-4">
               Discover the latest trends in women's fashion. Up to 40% OFF and
               other exclusive offers.
             </p>
@@ -63,6 +64,12 @@ export default async function HomePage() {
       <Section>
         <Deals />
       </Section>
+
+      <div className="bg-gray-light">
+        <Section>
+          <Reviews />
+        </Section>
+      </div>
 
       <Section>
         <Instagram />

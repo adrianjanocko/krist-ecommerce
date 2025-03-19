@@ -44,7 +44,7 @@ export default function AuthLayout({
       <div className="p-12 flex flex-col justify-center">
         <div className="grid gap-1 mb-7">
           <h1 className="text-4xl font-bold">{heading}</h1>
-          <p className="text-grey text-md">{subheading}</p>
+          <p className="text-gray text-md">{subheading}</p>
         </div>
 
         <form className="flex flex-col gap-4 w-full" onSubmit={onSubmit}>

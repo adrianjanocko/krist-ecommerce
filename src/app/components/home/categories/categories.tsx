@@ -79,7 +79,7 @@ export default function Categories({
         <div className="flex">
           {categories.map((category, index) => (
             <div key={index} className="flex-[0_0_50%] lg:flex-[0_0_25%] p-1">
-              <div className="bg-grey-light p-4 min-h-60 grid z-10 relative overflow-hidden">
+              <div className="bg-gray-light p-4 min-h-60 grid z-10 relative overflow-hidden">
                 <div className="absolute size-60 lg:size-full -z-10 left-10 top-5">
                   <Image
                     src={category.image_url}
@@ -89,7 +89,7 @@ export default function Categories({
                     fill
                   />
                 </div>
-                <span className="text-nowrap absolute top-3 left-10 text-6xl font-bold text-grey -z-20 opacity-40">
+                <span className="text-nowrap absolute top-3 left-10 text-6xl font-bold text-gray -z-20 opacity-40">
                   {category.name} Wear
                 </span>
                 <Link

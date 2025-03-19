@@ -23,7 +23,7 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const classes = twMerge(
-      "w-full px-6 py-3 text-white rounded-md hover:bg-gray-600 duration-300 disabled:bg-grey",
+      "w-full px-6 py-3 text-white rounded-md hover:bg-gray-600 duration-300 disabled:bg-gray",
       size === "sm" && "py-2 px-6",
       size === "icon" && "p-3",
       variant === "black" && "bg-black",
