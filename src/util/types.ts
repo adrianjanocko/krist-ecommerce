@@ -18,5 +18,14 @@ export interface Category {
   image_url: string;
 }
 
+export interface Review {
+  id: number;
+  stars: number;
+  review: string;
+  image_url: string;
+  name: string;
+  role: string;
+}
+
 export type LoginData = z.infer<typeof loginSchema>;
 export type RegisterData = z.infer<typeof registerSchema>;
