@@ -88,7 +88,7 @@ export default function Footer() {
         <div className="bg-gray opacity-20 w-full h-[1px]" />
 
         <span className="text-gray">
-          &copy; {new Date().getFullYear()} - All rights reserved
+          &copy; {new Date().getFullYear()} &mdash; All rights reserved
         </span>
       </Section>
     </div>

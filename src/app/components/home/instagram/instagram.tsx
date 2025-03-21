@@ -1,10 +1,9 @@
 import H2 from "@/components/H2";
-import Grid from "@/components/layout/grid";
 import Image from "next/image";
 
 export default function Instagram() {
   return (
-    <Grid>
+    <div className="grid gap-8">
       <H2 className="text-center">Our Instagram Stories</H2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -19,6 +18,6 @@ export default function Instagram() {
           </div>
         ))}
       </div>
-    </Grid>
+    </div>
   );
 }

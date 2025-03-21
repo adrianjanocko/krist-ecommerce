@@ -2,7 +2,6 @@
 
 import Button from "@/components/button";
 import H2 from "@/components/H2";
-import Grid from "@/components/layout/grid";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import useEmblaCarousel from "embla-carousel-react";
 import { JSX, useEffect, useRef } from "react";
@@ -58,7 +57,7 @@ export default function Carousel<T>({
   }
 
   return (
-    <Grid>
+    <div className="grid gap-8">
       <div className="flex justify-between items-center">
         <H2>{title}</H2>
 
@@ -90,6 +89,6 @@ export default function Carousel<T>({
           ))}
         </div>
       </div>
-    </Grid>
+    </div>
   );
 }
