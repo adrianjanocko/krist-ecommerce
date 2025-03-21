@@ -15,7 +15,6 @@ export interface WrapperProps {
 export interface Category {
   id: number;
   name: string;
-  image_url: string;
 }
 
 export interface Review {
