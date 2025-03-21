@@ -4,10 +4,8 @@ import Section from "@/components/layout/section";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-import { Suspense } from "react";
-import { ErrorBoundary } from "react-error-boundary";
-
 import H1 from "@/components/H1";
+import FallbackBoundary from "@/components/util/FallbackBoundary";
 import Footer from "./components/footer/footer";
 import CategoriesProvider from "./components/home/categories/categories-provider";
 import Deals from "./components/home/deals/deals";
@@ -54,11 +52,9 @@ export default async function HomePage() {
       </div>
 
       <Section>
-        <Suspense fallback={<p>Loading...</p>}>
-          <ErrorBoundary fallback={<p>Failed to fetch categories.</p>}>
-            <CategoriesProvider />
-          </ErrorBoundary>
-        </Suspense>
+        <FallbackBoundary>
+          <CategoriesProvider />
+        </FallbackBoundary>
       </Section>
 
       <Section>
