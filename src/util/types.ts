@@ -21,13 +21,13 @@ export interface WrapperProps {
   className?: string;
 }
 
-export interface Category {
+export interface CategoryProps {
   id: number;
   name: string;
   slug: string;
 }
 
-export interface Review {
+export interface ReviewProps {
   id: number;
   stars: number;
   review: string;
@@ -36,7 +36,7 @@ export interface Review {
   role: string;
 }
 
-export interface Product {
+export interface ProductProps {
   id: number;
   name: string;
   subtitle: string;
