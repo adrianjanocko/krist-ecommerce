@@ -1,10 +1,10 @@
 "use client";
 
+import Button from "@/components/button";
 import Carousel from "@/components/carousel";
 import { Category } from "@/util/types";
 import { getImageUrl } from "@/util/utils";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Categories({
   categories = [],
@@ -32,15 +32,16 @@ export default function Categories({
             <span className="text-nowrap absolute top-3 left-10 text-6xl font-bold text-gray -z-20 opacity-40">
               {category.name} Wear
             </span>
-            <Link
+
+            <Button
               href={`/shop/${category.name
                 .toLowerCase()
                 .replace(/ /g, "-")
                 .replace(/&/g, "and")}`}
-              className="self-end bg-white text-center py-3 font-medium rounded-lg"
+              className="self-end bg-white text-black text-center font-medium hover:bg-gray-300"
             >
               {category.name} Wear
-            </Link>
+            </Button>
           </div>
         );
       }}

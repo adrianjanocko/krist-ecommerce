@@ -2,10 +2,19 @@ import { ReactNode } from "react";
 import { z } from "zod";
 import { loginSchema, registerSchema } from "./schemas";
 
+/////////////
+// TYPES
+
 export type ResponseMessage = {
   success: boolean;
   message: string;
 };
+
+export type LoginData = z.infer<typeof loginSchema>;
+export type RegisterData = z.infer<typeof registerSchema>;
+
+/////////////
+// INTERFACES
 
 export interface WrapperProps {
   children: ReactNode;
@@ -26,5 +35,19 @@ export interface Review {
   role: string;
 }
 
-export type LoginData = z.infer<typeof loginSchema>;
-export type RegisterData = z.infer<typeof registerSchema>;
+export interface Product {
+  id: number;
+  name: string;
+  subtitle: string;
+  description: string;
+  price: number;
+  reviews?: number | null;
+  categorySubId: number;
+  colors?: string[] | null;
+  sizes?: string[] | null;
+  inStock: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+  sold?: number | null;
+  isBestseller?: boolean | null;
+}

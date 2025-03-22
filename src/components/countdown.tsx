@@ -48,7 +48,7 @@ export default function Countdown({ endDate, className }: CountdownTimerProps) {
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div
           key={unit}
-          className="flex flex-col px-4 py-2.5 rounded-md items-center border border-gray"
+          className="flex flex-col px-4 py-2.5 rounded-md items-center border border-gray-light"
         >
           <span className="countdown text-2xl font-bold">{value}</span>
           <span>{unitLabels[unit]}</span>
