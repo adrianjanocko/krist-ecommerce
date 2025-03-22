@@ -42,7 +42,7 @@ export default function Reviews({ reviews = [] }: { reviews: Review[] }) {
           </div>
         </div>
       )}
-      className="flex-[0_0_33.33%]"
+      className="flex-[0_0_50%] lg:flex-[0_0_33.33%]"
     />
   );
 }

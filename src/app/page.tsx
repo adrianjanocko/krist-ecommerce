@@ -14,7 +14,9 @@ import Features from "./components/home/features/features";
 import Instagram from "./components/home/instagram/instagram";
 import ReviewsProvider from "./components/home/reviews/reviews-provider";
 import Navbar from "./components/navbar/navbar";
-import heroImage from "/public/images/home/hero.png";
+
+import bestImage from "/public/images/home/hero/best.png";
+import heroImage from "/public/images/home/hero/hero.png";
 
 export default async function HomePage() {
   return (
@@ -22,7 +24,7 @@ export default async function HomePage() {
       <Navbar />
 
       <div className="px-4">
-        <div className="bg-gray-light flex-1 flex items-center justify-center xl:mx-4 gap-10 z-10 p-6 relative">
+        <div className="bg-gray-light flex-1 grid md:flex items-center justify-center xl:mx-4 gap-10 z-10 p-6 relative">
           <div className="grid gap-2 max-w-md">
             <H2>Classic Exclusive</H2>
             <H1 className="mb-2">Women's Collection</H1>
@@ -46,9 +48,12 @@ export default async function HomePage() {
             alt="Hero Image"
             className="w-1/2"
           />
-          <span className="absolute text-[14rem] font-bold text-white bottom-0 left-20 -z-10">
-            BEST
-          </span>
+          <Image
+            src={bestImage}
+            placeholder="blur"
+            alt="Best Image"
+            className="absolute w-1/3 font-bold text-white bottom-20 left-20 -z-10"
+          />
         </div>
       </div>
 

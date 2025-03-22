@@ -12,7 +12,7 @@ export default function Deals() {
   endDate.setDate(currentDate.getDate() + 5);
 
   return (
-    <div className="grid grid-cols-2 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
       <div className="grid gap-4">
         <H2>Deals of the Month</H2>
         <p>
