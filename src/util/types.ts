@@ -24,6 +24,7 @@ export interface WrapperProps {
 export interface Category {
   id: number;
   name: string;
+  slug: string;
 }
 
 export interface Review {
@@ -41,13 +42,14 @@ export interface Product {
   subtitle: string;
   description: string;
   price: number;
-  reviews?: number | null;
+  reviews?: number;
   categorySubId: number;
   colors?: string[] | null;
   sizes?: string[] | null;
   inStock: number;
   createdAt?: Date;
   updatedAt?: Date;
-  sold?: number | null;
-  isBestseller?: boolean | null;
+  sold?: number;
+  isBestseller?: boolean;
+  slug: string;
 }

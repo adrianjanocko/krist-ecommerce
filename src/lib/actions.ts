@@ -2,7 +2,7 @@
 
 import { loginSchema, registerSchema } from "@/util/schemas";
 import { revalidatePath } from "next/cache";
-import { Category, LoginData, RegisterData } from "../util/types";
+import { Category, LoginData, Product, RegisterData } from "../util/types";
 import { createClient } from "./supabase/server";
 
 /////////////
@@ -80,6 +80,7 @@ export async function logoutUser() {
 
 /////////////
 // SUPABASE - GET
+
 export async function getCategories(): Promise<Category[]> {
   const supabase = await createClient();
 
@@ -95,4 +96,22 @@ export async function getCategories(): Promise<Category[]> {
   }
 
   return categories;
+}
+
+export async function getBestsellers(): Promise<Product[]> {
+  const supabase = await createClient();
+
+  const { data: bestsellers, error } = await supabase
+    .from("products")
+    .select("*")
+    .eq("is_bestseller", true)
+    .order("sold", { ascending: false });
+
+  if (error) {
+    console.error(error);
+
+    throw new Error("Failed to fetch bestsellers.");
+  }
+
+  return bestsellers;
 }

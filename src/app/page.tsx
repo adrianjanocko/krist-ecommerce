@@ -7,6 +7,7 @@ import Image from "next/image";
 import H1 from "@/components/H1";
 import FallbackBoundary from "@/components/util/FallbackBoundary";
 import Footer from "./components/footer/footer";
+import BestsellerProvider from "./components/home/bestseller/bestseller-provider";
 import CategoriesProvider from "./components/home/categories/categories-provider";
 import Deals from "./components/home/deals/deals";
 import Features from "./components/home/features/features";
@@ -54,6 +55,12 @@ export default async function HomePage() {
       <Section>
         <FallbackBoundary>
           <CategoriesProvider />
+        </FallbackBoundary>
+      </Section>
+
+      <Section>
+        <FallbackBoundary>
+          <BestsellerProvider />
         </FallbackBoundary>
       </Section>
 

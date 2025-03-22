@@ -34,10 +34,7 @@ export default function Categories({
             </span>
 
             <Button
-              href={`/shop/${category.name
-                .toLowerCase()
-                .replace(/ /g, "-")
-                .replace(/&/g, "and")}`}
+              href={`/shop/${category.slug}`}
               className="self-end bg-white text-black text-center font-medium hover:bg-gray-300"
             >
               {category.name} Wear
