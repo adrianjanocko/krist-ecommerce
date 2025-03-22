@@ -3,7 +3,7 @@
 import ErrorMessage from "@/components/error-message";
 import Input from "@/components/input";
 import SubmitButton from "@/components/submit-button";
-import useActionHandler from "@/hooks/useActionHandler";
+import useActionHandler from "@/hooks/use-action-handler";
 import { registerUser } from "@/lib/actions";
 import { registerSchema } from "@/util/schemas";
 import { RegisterData } from "@/util/types";

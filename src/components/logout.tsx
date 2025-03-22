@@ -1,6 +1,6 @@
 "use client";
 
-import useActionHandler from "@/hooks/useActionHandler";
+import useActionHandler from "@/hooks/use-action-handler";
 import { logoutUser } from "@/lib/actions";
 import SubmitButton from "./submit-button";
 

@@ -1,10 +1,10 @@
-import Button from "@/components/button";
 import IconButton from "@/components/icon-button";
 import GallerySection from "@/components/layout/gallery-section";
 import { Product } from "@/util/types";
 import { getMainFolderImageUrl } from "@/util/utils";
 import { EyeIcon, StarIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import CardButton from "../../card-button";
 
 export default function Bestseller({
   bestsellers,
@@ -18,12 +18,15 @@ export default function Bestseller({
 
         return (
           <div
-            className="bg-gray-light p-4 min-h-72 grid z-10 relative overflow-hidden hover:bg-gray-200 transition duration-300"
+            className="bg-gray-light p-4 min-h-72 grid z-10 relative overflow-hidden"
             key={bestseller.id}
           >
             <div className="justify-self-end grid gap-2 self-start">
               <IconButton icon={<StarIcon />} />
-              <IconButton icon={<EyeIcon />} />
+              <IconButton
+                href={`/product/${bestseller.slug}`}
+                icon={<EyeIcon />}
+              />
             </div>
 
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 size-52 -z-10">
@@ -36,9 +39,7 @@ export default function Bestseller({
               />
             </div>
 
-            <Button className="self-end bg-white text-black text-center font-medium hover:bg-gray-300">
-              Add to Cart
-            </Button>
+            <CardButton text="Add to Cart" />
           </div>
         );
       })}

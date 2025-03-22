@@ -2,7 +2,7 @@
 
 import Input from "@/components/input";
 import SubmitButton from "@/components/submit-button";
-import useActionHandler from "@/hooks/useActionHandler";
+import useActionHandler from "@/hooks/use-action-handler";
 import { loginUser } from "@/lib/actions";
 import { loginSchema } from "@/util/schemas";
 import { LoginData } from "@/util/types";

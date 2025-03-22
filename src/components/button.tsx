@@ -31,14 +31,13 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
       className
     );
 
-    if (href) {
+    if (href)
       return (
         <Link href={href} className={classes} {...(props as LinkProps)}>
-          <span ref={ref as React.Ref<HTMLSpanElement>}>{children}</span>
+          {children}
           {icon && <span className="size-5">{icon}</span>}
         </Link>
       );
-    }
 
     return (
       <button

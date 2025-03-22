@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 import H1 from "@/components/H1";
-import FallbackBoundary from "@/components/util/FallbackBoundary";
+import FallbackBoundary from "@/components/util/fallback-boundary";
 import Footer from "./components/footer/footer";
 import BestsellerProvider from "./components/home/bestseller/bestseller-provider";
 import CategoriesProvider from "./components/home/categories/categories-provider";

@@ -1,10 +1,10 @@
 "use client";
 
-import Button from "@/components/button";
 import Carousel from "@/components/carousel";
 import { Category } from "@/util/types";
 import { getImageUrl } from "@/util/utils";
 import Image from "next/image";
+import CardButton from "../../card-button";
 
 export default function Categories({
   categories = [],
@@ -33,12 +33,7 @@ export default function Categories({
               {category.name} Wear
             </span>
 
-            <Button
-              href={`/shop/${category.slug}`}
-              className="self-end bg-white text-black text-center font-medium hover:bg-gray-300"
-            >
-              {category.name} Wear
-            </Button>
+            <CardButton text={`${category.name} Wear`} />
           </div>
         );
       }}
