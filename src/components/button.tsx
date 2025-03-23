@@ -1,20 +1,10 @@
+import { ButtonProps } from "@/util/types";
 import Link from "next/link";
-import React, { ReactNode, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
-
-interface BaseButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: "sm" | "icon";
-  variant?: "black";
-  icon?: ReactNode;
-}
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   className?: string;
-}
-
-interface ButtonProps extends BaseButtonProps {
-  href?: string;
 }
 
 const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(

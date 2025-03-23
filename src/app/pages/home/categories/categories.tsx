@@ -1,10 +1,10 @@
 "use client";
 
-import Carousel from "@/components/carousel";
 import { CategoryProps } from "@/util/types";
 import { getImageUrl } from "@/util/utils";
 import Image from "next/image";
-import CardButton from "../../card-button";
+import CardButton from "../components/card-button";
+import Carousel from "../components/carousel";
 
 export default function Categories({
   categories = [],
@@ -33,7 +33,7 @@ export default function Categories({
               {category.name} Wear
             </span>
 
-            <CardButton text={`${category.name} Wear`} />
+            <CardButton>{`${category.name} Wear`}</CardButton>
           </div>
         );
       }}

@@ -1,9 +1,9 @@
 "use client";
 
-import Carousel from "@/components/carousel";
 import { ReviewProps } from "@/util/types";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import Carousel from "../components/carousel";
 
 export default function Reviews({ reviews = [] }: { reviews: ReviewProps[] }) {
   return (

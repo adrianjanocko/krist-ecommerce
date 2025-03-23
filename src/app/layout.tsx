@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import StoreProvider from "./store-provider";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={`${jost.className} antialiased`}>
-        <main>{children}</main>
+        <StoreProvider>
+          <main>{children}</main>
+        </StoreProvider>
 
         <Toaster position="top-right" reverseOrder={false} />
       </body>

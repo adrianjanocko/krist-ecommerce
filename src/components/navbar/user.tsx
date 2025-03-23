@@ -1,6 +1,6 @@
 import Button from "@/components/button";
 import { createClient } from "@/lib/supabase/server";
-import Logout from "../../../components/logout";
+import Logout from "../logout";
 
 export default async function User() {
   const supabase = await createClient();

@@ -1,20 +1,19 @@
 import Button from "@/components/button";
+import Footer from "@/components/footer/footer";
+import H1 from "@/components/H1";
 import H2 from "@/components/H2";
 import Section from "@/components/layout/section";
+import Navbar from "@/components/navbar/navbar";
+import FallbackBoundary from "@/components/util/fallback-boundary";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import BestsellerProvider from "./pages/home/bestseller/bestseller-provider";
+import CategoriesProvider from "./pages/home/categories/categories-provider";
 
-import H1 from "@/components/H1";
-import FallbackBoundary from "@/components/util/fallback-boundary";
-import Footer from "./components/footer/footer";
-import BestsellerProvider from "./components/home/bestseller/bestseller-provider";
-import CategoriesProvider from "./components/home/categories/categories-provider";
-import Deals from "./components/home/deals/deals";
-import Features from "./components/home/features/features";
-import Instagram from "./components/home/instagram/instagram";
-import ReviewsProvider from "./components/home/reviews/reviews-provider";
-import Navbar from "./components/navbar/navbar";
-
+import Deals from "./pages/home/deals/deals";
+import Features from "./pages/home/features/features";
+import Instagram from "./pages/home/instagram/instagram";
+import ReviewsProvider from "./pages/home/reviews/reviews-provider";
 import bestImage from "/public/images/home/hero/best.png";
 import heroImage from "/public/images/home/hero/hero.png";
 

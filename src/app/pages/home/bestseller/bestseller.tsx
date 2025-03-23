@@ -1,6 +1,6 @@
-import GallerySection from "@/components/layout/gallery-section";
 import Product from "@/components/product";
 import { ProductProps } from "@/util/types";
+import GallerySection from "../components/gallery-section";
 
 export default function Bestseller({
   bestsellers,

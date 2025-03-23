@@ -1,9 +1,10 @@
 import Image from "next/image";
 
 import Button from "@/components/button";
-import Countdown from "@/components/countdown";
 import H2 from "@/components/H2";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Countdown from "../components/countdown";
+
 import dealsImage from "/public/images/home/deals.png";
 
 export default function Deals() {

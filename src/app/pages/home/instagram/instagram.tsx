@@ -1,5 +1,5 @@
-import GallerySection from "@/components/layout/gallery-section";
 import Image from "next/image";
+import GallerySection from "../components/gallery-section";
 
 export default function Instagram() {
   return (

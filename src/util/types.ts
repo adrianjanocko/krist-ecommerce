@@ -16,6 +16,14 @@ export type RegisterData = z.infer<typeof registerSchema>;
 /////////////
 // INTERFACES
 
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  size?: "sm" | "icon";
+  variant?: "black";
+  icon?: ReactNode;
+  href?: string;
+}
+
 export interface WrapperProps {
   children: ReactNode;
   className?: string;
