@@ -2,7 +2,12 @@
 
 import { loginSchema, registerSchema } from "@/util/schemas";
 import { revalidatePath } from "next/cache";
-import { Category, LoginData, Product, RegisterData } from "../util/types";
+import {
+  CategoryProps,
+  LoginData,
+  ProductProps,
+  RegisterData,
+} from "../util/types";
 import { createClient } from "./supabase/server";
 
 /////////////
@@ -16,7 +21,7 @@ export async function registerUser(formData: RegisterData) {
 
   const supabase = await createClient();
 
-  const { data, error } = await supabase.auth.signUp({
+  const { error } = await supabase.auth.signUp({
     email: validate.data.email,
     password: validate.data.password,
     options: {
@@ -46,7 +51,7 @@ export async function loginUser(formData: LoginData) {
 
   const supabase = await createClient();
 
-  const { data, error } = await supabase.auth.signInWithPassword({
+  const { error } = await supabase.auth.signInWithPassword({
     email: validate.data.email,
     password: validate.data.password,
   });
@@ -81,7 +86,7 @@ export async function logoutUser() {
 /////////////
 // SUPABASE - GET
 
-export async function getCategories(): Promise<Category[]> {
+export async function getCategories(): Promise<CategoryProps[]> {
   const supabase = await createClient();
 
   const { data: categories, error } = await supabase
@@ -98,7 +103,7 @@ export async function getCategories(): Promise<Category[]> {
   return categories;
 }
 
-export async function getBestsellers(): Promise<Product[]> {
+export async function getBestsellers(): Promise<ProductProps[]> {
   const supabase = await createClient();
 
   const { data: bestsellers, error } = await supabase

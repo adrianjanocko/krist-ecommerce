@@ -1,11 +1,11 @@
 "use client";
 
 import Carousel from "@/components/carousel";
-import { Review } from "@/util/types";
+import { ReviewProps } from "@/util/types";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-export default function Reviews({ reviews = [] }: { reviews: Review[] }) {
+export default function Reviews({ reviews = [] }: { reviews: ReviewProps[] }) {
   return (
     <Carousel
       title="What our Customer says"

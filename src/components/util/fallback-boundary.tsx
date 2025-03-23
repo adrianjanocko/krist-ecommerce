@@ -9,7 +9,7 @@ type FallbackBoundaryProps = {
 
 export default function FallbackBoundary({
   children,
-  fallback = <LoadingSkeleton />,
+  fallback = <GridSkeleton />,
   errorFallback = <p>Failed to retrieve data.</p>,
 }: FallbackBoundaryProps) {
   return (
@@ -19,13 +19,15 @@ export default function FallbackBoundary({
   );
 }
 
-function LoadingSkeleton() {
+function GridSkeleton() {
   return (
     <div className="grid gap-2">
       <div className="grid grid-cols-2 gap-2">
-        <div className="skeleton h-4 w-full"></div>
-        <div className="skeleton h-4 w-full"></div>
+        <div className="skeleton h-8 w-full"></div>
+        <div className="skeleton h-8 w-full"></div>
       </div>
+      <div className="skeleton h-4 w-full"></div>
+      <div className="skeleton h-4 w-full"></div>
       <div className="skeleton h-4 w-full"></div>
       <div className="skeleton h-4 w-full"></div>
       <div className="skeleton h-4 w-full"></div>

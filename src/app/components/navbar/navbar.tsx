@@ -1,5 +1,6 @@
 import Container from "@/components/layout/container";
 import Logo from "@/components/logo";
+import FallbackBoundary from "@/components/util/fallback-boundary";
 import {
   HeartIcon,
   MagnifyingGlassIcon,
@@ -8,7 +9,7 @@ import {
 import Link from "next/link";
 import User from "./user";
 
-export default async function Navbar() {
+export default function Navbar() {
   return (
     <nav>
       <Container className="flex justify-between items-center py-4">
@@ -40,7 +41,16 @@ export default async function Navbar() {
             <ShoppingBagIcon className="size-6" />
           </div>
 
-          <User />
+          <FallbackBoundary
+            fallback={
+              <span className="loading loading-spinner loading-xs"></span>
+            }
+            errorFallback={
+              <span className="loading loading-infinity loading-xs"></span>
+            }
+          >
+            <User />
+          </FallbackBoundary>
         </div>
       </Container>
     </nav>

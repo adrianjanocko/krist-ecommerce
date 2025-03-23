@@ -1,9 +1,9 @@
-import { Review } from "@/util/types";
+import { ReviewProps } from "@/util/types";
 import Reviews from "./reviews";
 
 export default function ReviewsProvider() {
   // TODO
-  const reviews: Review[] = [
+  const reviews: ReviewProps[] = [
     {
       id: 1,
       stars: 5,
