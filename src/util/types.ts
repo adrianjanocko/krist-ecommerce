@@ -35,6 +35,10 @@ export interface CategoryProps {
   slug: string;
 }
 
+export interface SubcategoryProps extends CategoryProps {
+  category_id: number;
+}
+
 export interface ReviewProps {
   id: number;
   stars: number;

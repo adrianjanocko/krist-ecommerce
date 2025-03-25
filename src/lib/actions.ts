@@ -7,6 +7,7 @@ import {
   LoginData,
   ProductProps,
   RegisterData,
+  SubcategoryProps,
 } from "../util/types";
 import { createClient } from "./supabase/server";
 
@@ -91,6 +92,23 @@ export async function getCategories(): Promise<CategoryProps[]> {
 
   const { data: categories, error } = await supabase
     .from("categories")
+    .select("*")
+    .order("name", { ascending: false });
+
+  if (error) {
+    console.error(error);
+
+    throw new Error("Failed to fetch categories.");
+  }
+
+  return categories;
+}
+
+export async function getSubcategories(): Promise<SubcategoryProps[]> {
+  const supabase = await createClient();
+
+  const { data: categories, error } = await supabase
+    .from("categories_sub")
     .select("*")
     .order("name", { ascending: false });
 
